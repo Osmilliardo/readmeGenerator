@@ -45,10 +45,9 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'Please select the usage license',
-        choices: ['GNU Public License', 'MIT License', 'Apache License', 'BSD License', 
-                  'Mozilla Public License', 'Open-Source License', 'Eclipse Public License',
-                  'Microsoft Public License', 'Boost Software License', 'Other'
-                ],
+        choices: ['MIT License', 'Mozilla Public License', 'Apache License', 'GNU Public License', 
+                  'BSD License', 'Open-Database License', 'Other'
+                 ],
     },
 
     {
