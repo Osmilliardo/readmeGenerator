@@ -67,14 +67,56 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  
+  if (license === ''){
+    return ''
+  } else {
+    return `${license} ${renderLicenseBadge(license)}, \n ${renderLicenseLink(license)}\n`
+  }
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  let title = `# ${data.title}\n`
+  let tableContents = ``
+  let body = ``
 
-`;
+  if (data.description !== ''){
+    tableContents += `Description\n`
+    body += `## Description\n${data.description}\n`
+  }
+
+  if (data.install !== ''){
+    tableContents += `Installation\n`
+    body += `## Installation\n${data.install}\n`
+  }
+
+  if (data.usage !== ''){
+    tableContents += `Usage\n`
+    body += `## Usage\n${data.usage}\n`
+  }
+
+  if (data.contribute !== ''){
+    tableContents += `How to Contribute\n`
+    body += `## How to Contribute\n${data.contribute}\n`
+  }
+
+  if (data.testing !== ''){
+    tableContents += `Testing\n`
+    body += `## Testing\n${data.testing}\n`
+  }
+
+  if (data.license !== ''){
+    tableContents += `License\n`
+    body += `## License\n${renderLicenseSection(data.license)}\n`
+  }
+
+  if (data.githubName || data.email !== ''){
+    tableContents += `Contact\n`
+    body += `## Contact\n github:${data.githubName}\n email:${data.email}\n`
+  }
+
+  return `${title}\n${tableContents}\n${body}` 
+
 }
 
 module.exports = generateMarkdown;

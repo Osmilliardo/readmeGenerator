@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
-const fs = reqiuire('fs')
+const fs = require('fs')
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -38,7 +38,7 @@ const questions = [
     {
         type: 'input',
         name: 'testing',
-        mesasge: 'Please explain how to test the application'
+        message: 'Please explain how to test the application'
     },
 
     {
