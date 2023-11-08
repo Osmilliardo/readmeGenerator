@@ -8,43 +8,43 @@ const questions = [
     {
         type: 'input',
         name: 'title',
-        message: 'Please enter the Title of your project',
+        message: 'Please enter the Title of your project: ',
     },
 
     {
         type: 'input',
         name: 'description',
-        message: 'Please enter a short description',
+        message: 'Please enter a short description: ',
     },
 
     {
         type: 'input',
         name: 'install',
-        message: 'Please enter installation instructions if any',
+        message: 'Please enter installation instructions if any: ',
     },
 
     {
         type: 'input',
         name: 'usage',
-        message: 'Please describe how to use the application',
+        message: 'Please describe how to use the application: ',
     },
 
     {
         type: 'input',
         name: 'contribute',
-        message: 'Please explain how to contribute the to project',
+        message: 'Please explain how to contribute the to project: ',
     },
 
     {
         type: 'input',
         name: 'testing',
-        message: 'Please explain how to test the application'
+        message: 'Please explain how to test the application: '
     },
 
     {
         type: 'list',
         name: 'license',
-        message: 'Please select the usage license',
+        message: 'Please select the usage license: ',
         choices: ['MIT License', 'Mozilla Public License', 'Apache License', 'GNU Public License', 
                   'BSD License', 'Open-Database License', 'Other'
                  ],
@@ -53,13 +53,13 @@ const questions = [
     {
         type: 'input',
         name: 'githubName',
-        message: 'Please enter your github username',
+        message: 'Please enter your github username: ',
     },
 
     {
         type: 'input',
         name: 'email',
-        message: 'Please enter your email address in case of any further questions',
+        message: 'Please enter your email address in case of any further questions: ',
     },
 ];
 
